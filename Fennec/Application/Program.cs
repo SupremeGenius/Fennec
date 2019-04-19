@@ -1,5 +1,6 @@
 ﻿using System;
 using Fennec.Watchers;
+using Fennec.View;
 
 using System.Collections.Generic;
 using System.Linq;
@@ -11,12 +12,8 @@ namespace Fennec
     class Program
     {
         static void Main(string[] args)
-        {
-            //  >>>>>[  Set up Session Lock/Unlock Recording
-            //          -----
-            SessionLockWatcher slWatcher = new SessionLockWatcher();
+        {        
 
-            Console.ReadLine();
         }
     }
 }
