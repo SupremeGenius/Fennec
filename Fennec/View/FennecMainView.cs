@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Fennec.Controller;
 
 namespace Fennec.View
 {
     class FennecMainView: IView
     {
-        public FennecMainView()
+        public FennecMainView(Model.Model M, FennecController C)
         {
 
         }
