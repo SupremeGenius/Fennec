@@ -1,5 +1,6 @@
 ﻿using System;
-
+using System.Security.Principal;
+using System.DirectoryServices.AccountManagement;
 
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ using Fennec.Watchers;
 using Fennec.View;
 using Fennec.Model;
 using Fennec.Controller;
+
 
 namespace Fennec
 {
@@ -34,6 +36,8 @@ namespace Fennec
             //  >>>>>[  Wonder Twin Powers, ACTIVATE!
             //          -----
             View.ModelChanged();
+            Console.WriteLine("Fennec is watching...");
+            Console.ReadLine();
         }
     }
 }

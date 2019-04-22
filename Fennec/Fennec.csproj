@@ -38,6 +38,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,6 +49,11 @@
   <ItemGroup>
     <Compile Include="Controller\FennecController.cs" />
     <Compile Include="Controller\IController.cs" />
+    <Compile Include="FennecDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FennecDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Model\FennecModel.cs" />
     <Compile Include="Model\Model.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -64,14 +70,28 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="FennecDataSet.xsc">
+      <DependentUpon>FennecDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FennecDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FennecDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FennecDataSet.xss">
+      <DependentUpon>FennecDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Model\Data\" />
+    <Content Include="Model\Data\Fennec.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

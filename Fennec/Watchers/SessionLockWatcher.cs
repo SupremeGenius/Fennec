@@ -1,5 +1,5 @@
 ﻿using System;
-//using Fennec.Model.Data.FennecDataSetTableAdapters;
+using Fennec.FennecDataSetTableAdapters;
 
 namespace Fennec.Watchers
 {
@@ -12,9 +12,7 @@ namespace Fennec.Watchers
 
         private void SystemEvents_SessionSwitch(object sender, Microsoft.Win32.SessionSwitchEventArgs e)
         {
-            //tblTimeStampsTableAdapter tblOut = new tblTimeStampsTableAdapter();
-
-            //tblOut.Insert(0, !(e.Reason == Microsoft.Win32.SessionSwitchReason.SessionLock), DateTime.Now);
+            new tblTimeStampsTableAdapter().Insert(false, false, 0, !(e.Reason == Microsoft.Win32.SessionSwitchReason.SessionLock), DateTime.Now);
         }
     }
 }

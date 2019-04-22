@@ -10,7 +10,7 @@ namespace Fennec.Controller
     {
         public FennecController(Model.Model model)
         {
-            throw new NotImplementedException();
+            // throw new NotImplementedException();
         }
 
         public bool Execute(string command)
